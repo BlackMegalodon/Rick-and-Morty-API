@@ -8,8 +8,8 @@ const Stack = createStackNavigator();
 export default function App() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="CharactersListScreen">
-          <Stack.Screen name="CharactersListScreen" component={CharactersListScreen} options={{ headerShown: false }} />
+        <Stack.Navigator initialRouteName="Rick & Morty">
+          <Stack.Screen name="Rick & Morty" component={CharactersListScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -25,20 +25,20 @@ export default function CharactersListScreen({ navigation }) {
     }
 
     return (
-        <View style={[{ flexDirection: 'column', flex: 1, padding: 20}]}>
+        <View style={[{ flexDirection: 'column', flex: 1, padding: 40}]}>
             <FlatList
                 data={characters}
                 keyExtractor={item => item.id.toString()}
                 renderItem={({ item }) => (
                     <TouchableOpacity>
-                        <View style={[{ flexDirection: 'row', backgroundColor: '#89b8f5', marginBottom: windowHeight * 0.02, padding: 10, width: "100%" }]}>
+                        <View style={[{ flexDirection: 'row', backgroundColor: '#89b8f5', marginBottom: 10, padding: 10, width: "100%" }]}>
                             <View style={{ marginRight: 10 }}>
                                 <Image
-                                    source={{ uri: item.image }} style={{ width: windowWidth * 0.3, height: windowWidth * 0.3, resizeMode: 'contain' }}
+                                    source={{ uri: item.image }} style={{ width: 100, height: 100, resizeMode: 'cover' }}
                                 />
                             </View>
                             <View style={{ flexDirection: "column", flex: 1 }}>
-                                <Text style={{ fontSize: 40 }}>Name: {item.name}</Text>
+                                <Text style={{ fontSize: 22 }}>Name: {item.name}</Text>
                                 <Text>Status: {item.status}</Text>
                                 <Text>Species: {item.species}</Text>
                             </View>
